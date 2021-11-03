@@ -42,12 +42,12 @@ table, th, td {
   border:1px solid black;
 }
 li{
-  width: 60px;
-  margin-right: 160px
+  width: 180px;
+  margin-right: 40px
 }
 ul{
   padding-left: 0px;
 }
 .h2{
-  margin-right: 120px;
+  margin-right: 0px;
 }
