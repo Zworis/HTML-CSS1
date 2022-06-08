@@ -1,0 +1,96 @@
+html {
+  display: grid;
+  place-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#menu {
+  position: relative;
+  top: 40px;
+  padding: 30px;
+  background: #e8e8f3;
+  border-radius: 100%;
+  cursor: pointer;
+  /* box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0); */
+}
+#menu::before, #menu::after {
+    content: "";
+    background: #c3c2c7;
+    border-radius: 5px;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    left: 16px;
+    top: 27px;
+    transition: 0.2s ease;
+    z-index: 1;
+}
+#menu::before {
+    transform: rotate(0deg)
+}
+#menu::after {
+    transform: rotate(180deg);
+}
+#menu.open {
+  opacity: .9;
+}
+.button.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+.button.open:first-of-type {
+      bottom: 40px;
+      right: 70px;
+      background: url("https://www.autobedrijfvanvlerken.nl/wp-content/uploads/2021/02/contact.png") no-repeat 50%/50% #e8e8f3;
+}
+.button.open:nth-of-type(2) {
+      bottom: -40px;
+      right: 70px;
+      background: url("https://www.freepngimg.com/download/logo/88500-text-awesome-question-mark-font-symbol.png") no-repeat 50%/ 50% #e8e8f3;
+      transition-delay: .05s;
+}
+.button.open:nth-of-type(3) {
+      bottom: -80px;
+      background: url("https://www.freepnglogos.com/uploads/logo-home-png/chimney-home-icon-transparent-1.png") no-repeat 50%/ 50% #e8e8f3;
+      transition-delay: .1s;
+}
+.button.open:nth-of-type(4) {
+      bottom: -40px;
+      right: -70px;
+      background: url("https://www.nicepng.com/png/full/14-140945_download-african-american-teen-thinking.png") no-repeat 50%/ 50% #e8e8f3;
+      transition-delay: .15s;
+}
+.button.open:last-of-type {
+      bottom: 40px;
+      right: -70px;
+      background: url(attachment_99416788.png) no-repeat 50% 45%/50% 45% #e8e8f3;
+      transition-delay: .2s;
+}
+#menu.open::before {
+  transform: rotate(45deg);
+}
+#menu.open::after {
+  transform: rotate(-45deg);
+}
+
+
+
+.button {
+  padding: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #e8e8f3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: inherit;
+  transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity, 0.2s cubic-bezier(.08,.82,.17,1) transform;
+}
+.button:hover {
+      transform: scale(1.1);
+}
+#menu{
+  float: left;
+}
